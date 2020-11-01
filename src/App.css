@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  width: 100%;
+}
+    
+.flip-container.flipped .flipper{
+  transform:rotateY(180deg);
+}
+.flipper{
+  transition:0.5s;
+  transform-style: preserve-3d;
+  position:relative;
+}
+
+.front,
+.back{
+  backface-visibility:hidden;
+  position:absolute;
+  left: 0;
+  top:0;
+}    
+
+.back{
+  z-index: 2;
+  background: black;
+  transform: rotateY(90deg);
+
+}
+.front{
+  transform: rotateY(180deg);
+  background: red;
+}
